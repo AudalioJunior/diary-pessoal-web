@@ -1,32 +1,43 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar class="green darken-3" app>
+      <v-btn color="blue lighten-2" icon @click="dialog = !dialog">
+        <v-icon color="white" v-if="dialog">mdi-arrow-left-thick</v-icon>
+        <v-icon color="white" v-else>mdi-arrow-right-thick</v-icon>
+      </v-btn>
+       <p class="tilte">Green To Do</p> 
+    </v-app-bar>
+  <NavBar :dialog="dialog"/>
+    <v-main class="light-green lighten-5">
+      <!-- Provides the application the proper gutter -->
+      <v-container fluid>
+        <!-- If using vue-router -->
+        <router-view></router-view>
+      </v-container>
+    </v-main>
+
+    <v-footer app class="green darken-3">
+      <!-- -->
+    </v-footer>
+  </v-app>
 </template>
+<script>
+import NavBar from "./components/NavBar/"
+export default {
+  components:{
+    NavBar
+  },
+  data: () => ({
+    dialog: Boolean()
+  })
+};
+</script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<style>
+.tilte{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  margin-top: 0.5cm;
+  size: 1cm;
 }
 </style>
