@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import DashBoard from "../components/Dashboard/"
-import Task from "../components/Task/"
-import Finances from "../components/Finances/"
+import DashBoard from "../views/Main/"
+import Task from "../views/Task/"
+import Finances from "../views/Finances/"
 
 
 Vue.use(VueRouter)
