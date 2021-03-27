@@ -1,9 +1,20 @@
 <template>
-  <p>tarefas</p>
+  <v-container>
+    <v-card>
+      <v-container>
+        <Task />
+      </v-container>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
-export default {};
+import Task from "../../components/Task/";
+export default {
+  components: {
+    Task,
+  },
+};
 </script>
 
 <style>

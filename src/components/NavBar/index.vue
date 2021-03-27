@@ -7,7 +7,7 @@
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title class="title white--text">
-            John Leider
+            Alfredo
           </v-list-item-title>
           <v-list-item-subtitle class="white--text"
             >john@vuetifyjs.com</v-list-item-subtitle
