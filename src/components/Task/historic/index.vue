@@ -1,5 +1,5 @@
 <template>
-  <v-dialog persistent v-model="dialog" max-width="250" height="300">
+  <v-dialog v-model="dialog" max-width="250" height="300">
     <v-card height="200">
       <v-card-title>Montando Histórico</v-card-title>
       <div class="body">
@@ -28,7 +28,7 @@ export default {
 .spinner {
   margin-top: 15px;
   border: 8px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #22a6b3;
+  border-left-color: red;
   height: 60px;
   width: 60px;
   border-radius: 100%;
